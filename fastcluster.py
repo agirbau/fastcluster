@@ -92,8 +92,8 @@ def kmeans(clst_fn,
 
     npr.seed(seed)
     # Probe for datatype and dimensionality
-    pnts_fobj = tables.openFile(pnts_fn, 'r')
-    for pnts_obj in pnts_fobj.walkNodes('/', classname = 'Array'):
+    pnts_fobj = tables.open_file(pnts_fn, 'r')
+    for pnts_obj in pnts_fobj.walk_nodes('/', classname = 'Array'):
         break
 
     N = pnts_obj.shape[0]
